@@ -13,6 +13,7 @@
 		E9968C0E1F219C42009B3FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9968C0D1F219C42009B3FC0 /* Assets.xcassets */; };
 		E9968C111F219C42009B3FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9968C0F1F219C42009B3FC0 /* LaunchScreen.storyboard */; };
 		E9968C191F219C96009B3FC0 /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E9968C181F219C96009B3FC0 /* GameSound.wav */; };
+		E9968C1B1F22AE77009B3FC0 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9968C1A1F22AE77009B3FC0 /* TriviaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E9968C101F219C42009B3FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9968C121F219C42009B3FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9968C181F219C96009B3FC0 /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
+		E9968C1A1F22AE77009B3FC0 /* TriviaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E9968C061F219C42009B3FC0 /* AppDelegate.swift */,
 				E9968C081F219C42009B3FC0 /* ViewController.swift */,
+				E9968C1A1F22AE77009B3FC0 /* TriviaModel.swift */,
 				E9968C0A1F219C42009B3FC0 /* Main.storyboard */,
 				E9968C0D1F219C42009B3FC0 /* Assets.xcassets */,
 				E9968C0F1F219C42009B3FC0 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9968C091F219C42009B3FC0 /* ViewController.swift in Sources */,
+				E9968C1B1F22AE77009B3FC0 /* TriviaModel.swift in Sources */,
 				E9968C071F219C42009B3FC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
