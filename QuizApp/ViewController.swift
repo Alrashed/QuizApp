@@ -15,14 +15,17 @@ class ViewController: UIViewController {
     let questionsPerRound = 4
     var questionsAsked = 0
     var correctQuestions = 0
-    var indexOfSelectedQuestion: Int = 0
+    var correctAnswer = ""
     
     var gameSound: SystemSoundID = 0
-    let trivia = TriviaModel()
+    var triviaModel = TriviaModel()
     
     @IBOutlet weak var questionField: UILabel!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var responseLabel: UILabel!
+    @IBOutlet weak var option1Button: UIButton!
+    @IBOutlet weak var option2Button: UIButton!
+    @IBOutlet weak var option3Button: UIButton!
+    @IBOutlet weak var option4Button: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     
     override func viewDidLoad() {
@@ -34,16 +37,30 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.questions.count)
-        let questionDictionary = trivia.questions[indexOfSelectedQuestion]
-        questionField.text = questionDictionary["Question"]
-        playAgainButton.isHidden = true
+        if let triviaList = triviaModel.randomQuestion() {
+            playAgainButton.isHidden = true
+            setupQuestionAndOptions(from: triviaList)
+            
+        } else {
+            nextRound()
+        }
     }
     
-    func displayScore() {
+    func setupQuestionAndOptions(from triviaList: TriviaModel.Question) {
+        correctAnswer = triviaList.answer
+        
+        questionField.text = triviaList.question
+        option1Button.setTitle(triviaList.options[0], for: .normal)
+        option2Button.setTitle(triviaList.options[1], for: .normal)
+        option3Button.setTitle(triviaList.options[2], for: .normal)
+        option4Button.setTitle(triviaList.options[3], for: .normal)
+        
+        enableButtons(true)
+    }
+    
+    func displayScore()  {
         // Hide the answer buttons
-        trueButton.isHidden = true
-        falseButton.isHidden = true
+        hideOptionButtons(true)
         
         // Display play again button
         playAgainButton.isHidden = false
@@ -56,33 +73,39 @@ class ViewController: UIViewController {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let selectedQuestionDict = trivia.questions[indexOfSelectedQuestion]
-        let correctAnswer = selectedQuestionDict["Answer"]
+        enableButtons(false)
         
-        if (sender === trueButton &&  correctAnswer == "True") || (sender === falseButton && correctAnswer == "False") {
+        if (sender.currentTitle == correctAnswer) {
             correctQuestions += 1
-            questionField.text = "Correct!"
+            responseLabel.isHidden = false
+            responseLabel.textColor = UIColor(red: 44/255, green: 148/255, blue: 135/255, alpha: 1)
+            responseLabel.text = "Correct!"
         } else {
-            questionField.text = "Sorry, wrong answer!"
+            responseLabel.isHidden = false
+            responseLabel.textColor = UIColor(red: 249/255, green: 162/255, blue: 99/255, alpha: 1)
+            responseLabel.text = "Sorry, thats not it."
         }
         
         loadNextRoundWithDelay(seconds: 2)
     }
     
     func nextRound() {
-        if questionsAsked == questionsPerRound {
+        if questionsAsked == questionsPerRound || triviaModel.numberOfQuestionsLeft() == 0 {
             // Game is over
+            responseLabel.isHidden = true
             displayScore()
+            
+            triviaModel = TriviaModel()
         } else {
             // Continue game
+            responseLabel.isHidden = true
             displayQuestion()
         }
     }
     
     @IBAction func playAgain() {
         // Show the answer buttons
-        trueButton.isHidden = false
-        falseButton.isHidden = false
+        hideOptionButtons(false)
         
         questionsAsked = 0
         correctQuestions = 0
@@ -90,8 +113,21 @@ class ViewController: UIViewController {
     }
     
     
-    
     // MARK: Helper Methods
+    
+    func hideOptionButtons(_ hidden: Bool) {
+        option1Button.isHidden = hidden
+        option2Button.isHidden = hidden
+        option3Button.isHidden = hidden
+        option4Button.isHidden = hidden
+    }
+    
+    func enableButtons(_ enabled: Bool) {
+        option1Button.isEnabled = enabled
+        option2Button.isEnabled = enabled
+        option3Button.isEnabled = enabled
+        option4Button.isEnabled = enabled
+    }
     
     func loadNextRoundWithDelay(seconds: Int) {
         // Converts a delay in seconds to nanoseconds as signed 64 bit integer

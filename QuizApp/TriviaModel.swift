@@ -76,4 +76,8 @@ class TriviaModel {
     func randomQuestion() -> Question? {
         return questions.popLast()
     }
+    
+    func numberOfQuestionsLeft() -> Int {
+        return questions.count
+    }
 }
