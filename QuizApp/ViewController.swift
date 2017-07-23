@@ -30,6 +30,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        option1Button.layer.cornerRadius = 10
+        option2Button.layer.cornerRadius = 10
+        option3Button.layer.cornerRadius = 10
+        option4Button.layer.cornerRadius = 10
+        playAgainButton.layer.cornerRadius = 10
+        
         loadGameStartSound()
         // Start game
         playGameStartSound()
