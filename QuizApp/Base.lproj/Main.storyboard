@@ -22,37 +22,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-Cu-ryp">
-                                <rect key="frame" x="37" y="200" width="245" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-az-9vo">
+                                <rect key="frame" x="37" y="150" width="245" height="50"/>
                                 <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ERj-F0-dhz"/>
+                                    <constraint firstAttribute="height" constant="50" id="tvo-yC-ZQh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="True"/>
+                                <state key="normal" title="Option1"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="4ub-fW-bFL" eventType="touchUpInside" id="8oc-RM-0Gt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-Cu-ryp" userLabel="Option2 Button">
+                                <rect key="frame" x="37" y="230" width="245" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RFZ-bh-vR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option2"/>
                                 <connections>
                                     <action selector="checkAnswer:" destination="4ub-fW-bFL" eventType="touchUpInside" id="1pQ-IB-yHJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pY-mp-C7d">
-                                <rect key="frame" x="37" y="280" width="245" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pY-mp-C7d" userLabel="Option3 Button">
+                                <rect key="frame" x="37" y="310" width="245" height="50"/>
                                 <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZjD-we-atY"/>
+                                    <constraint firstAttribute="height" constant="50" id="hmT-cL-QTs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="False"/>
+                                <state key="normal" title="Option3"/>
                                 <connections>
                                     <action selector="checkAnswer:" destination="4ub-fW-bFL" eventType="touchUpInside" id="ERr-9J-4gn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhY-91-b9k">
+                                <rect key="frame" x="37" y="390" width="245" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TBh-ti-Dg5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Option4"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="4ub-fW-bFL" eventType="touchUpInside" id="cjk-vH-b3l"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHk-TW-0GR">
-                                <rect key="frame" x="37" y="373" width="245" height="50"/>
+                                <rect key="frame" x="37" y="475" width="245" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GcJ-zj-QNu"/>
+                                    <constraint firstAttribute="height" constant="50" id="pGr-YO-I7y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,40 +87,59 @@
                                     <action selector="playAgain" destination="4ub-fW-bFL" eventType="touchUpInside" id="DJ6-hp-afK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-0R-Pci">
-                                <rect key="frame" x="36" y="80" width="248" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Titanic departed from the United Kingdom, where was it supposed to arrive?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-0R-Pci">
+                                <rect key="frame" x="36" y="28" width="248" height="57.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, That's not it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3m-qk-Cnh">
+                                <rect key="frame" x="72" y="108" width="174" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.97607129812240601" green="0.63528233766555786" blue="0.38717976212501526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4pY-mp-C7d" firstAttribute="top" secondItem="Nz0-Cu-ryp" secondAttribute="bottom" constant="30" id="0U6-PQ-4Qh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pUW-0R-Pci" secondAttribute="trailing" constant="20" id="BpB-nr-pxD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4pY-mp-C7d" secondAttribute="trailing" constant="22" id="Hqo-G4-iLB"/>
-                            <constraint firstItem="zHk-TW-0GR" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="HrQ-zO-foK"/>
-                            <constraint firstItem="Nz0-Cu-ryp" firstAttribute="top" secondItem="pUW-0R-Pci" secondAttribute="top" constant="120" id="IcR-l8-aWE"/>
-                            <constraint firstItem="Nz0-Cu-ryp" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="Jo0-Rr-0qZ"/>
-                            <constraint firstItem="4pY-mp-C7d" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="KZq-T1-121"/>
-                            <constraint firstItem="pUW-0R-Pci" firstAttribute="top" secondItem="Z9V-Fu-oVW" secondAttribute="bottom" constant="60" id="cZf-Pe-6pX"/>
-                            <constraint firstItem="zHk-TW-0GR" firstAttribute="top" secondItem="4pY-mp-C7d" secondAttribute="bottom" constant="43" id="tOI-z1-Vsc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nz0-Cu-ryp" secondAttribute="trailing" constant="22" id="tUS-zL-oBN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zHk-TW-0GR" secondAttribute="trailing" constant="22" id="v6Q-Ua-7Z4"/>
-                            <constraint firstItem="RUf-cn-qIO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zHk-TW-0GR" secondAttribute="bottom" constant="145" id="wgU-So-i0F"/>
-                            <constraint firstItem="pUW-0R-Pci" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="20" id="ySC-4f-Hl7"/>
+                            <constraint firstItem="k3m-qk-Cnh" firstAttribute="top" secondItem="pUW-0R-Pci" secondAttribute="top" constant="80" id="1le-om-uxT"/>
+                            <constraint firstItem="QhY-91-b9k" firstAttribute="top" secondItem="4pY-mp-C7d" secondAttribute="bottom" constant="30" id="8T7-Au-Avc"/>
+                            <constraint firstItem="4pY-mp-C7d" firstAttribute="top" secondItem="Nz0-Cu-ryp" secondAttribute="bottom" constant="30" id="BjX-Yz-mvM"/>
+                            <constraint firstItem="RUf-cn-qIO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zHk-TW-0GR" secondAttribute="bottom" constant="43" id="DGu-n4-inh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Pi-az-9vo" secondAttribute="trailing" constant="22" id="KdV-IV-WOd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QhY-91-b9k" secondAttribute="trailing" constant="22" id="Lc5-zx-gwe"/>
+                            <constraint firstItem="pUW-0R-Pci" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="20" id="Sgh-un-Vv4"/>
+                            <constraint firstItem="zHk-TW-0GR" firstAttribute="top" secondItem="QhY-91-b9k" secondAttribute="bottom" constant="35" id="Td5-Ya-qUt"/>
+                            <constraint firstItem="Nz0-Cu-ryp" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="YPp-iW-ktu"/>
+                            <constraint firstItem="k3m-qk-Cnh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="56" id="ZCh-63-0kG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4pY-mp-C7d" secondAttribute="trailing" constant="22" id="Zs7-Fk-xeH"/>
+                            <constraint firstItem="4pY-mp-C7d" firstAttribute="centerY" secondItem="dWv-cq-Y0K" secondAttribute="centerY" constant="51" id="dyC-Hz-WWE"/>
+                            <constraint firstItem="pUW-0R-Pci" firstAttribute="top" secondItem="Z9V-Fu-oVW" secondAttribute="bottom" constant="8" id="iiH-bo-e94"/>
+                            <constraint firstItem="Nz0-Cu-ryp" firstAttribute="top" secondItem="6Pi-az-9vo" secondAttribute="bottom" constant="30" id="jgQ-GG-B2G"/>
+                            <constraint firstItem="4pY-mp-C7d" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="mHf-Lf-IQO"/>
+                            <constraint firstItem="zHk-TW-0GR" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="p33-ee-6f3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zHk-TW-0GR" secondAttribute="trailing" constant="22" id="t11-Pl-1VW"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="k3m-qk-Cnh" secondAttribute="trailing" constant="58" id="x9k-Gx-vwH"/>
+                            <constraint firstItem="6Pi-az-9vo" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="xpr-Vd-c6n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nz0-Cu-ryp" secondAttribute="trailing" constant="22" id="xsD-AG-aoa"/>
+                            <constraint firstItem="QhY-91-b9k" firstAttribute="leading" secondItem="dWv-cq-Y0K" secondAttribute="leadingMargin" constant="21" id="yf2-al-6PI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pUW-0R-Pci" secondAttribute="trailing" constant="20" id="z8e-fi-D5Z"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="falseButton" destination="4pY-mp-C7d" id="iQv-Tl-2Ne"/>
+                        <outlet property="option1Button" destination="6Pi-az-9vo" id="cnv-JA-VUf"/>
+                        <outlet property="option2Button" destination="Nz0-Cu-ryp" id="oM5-bU-0ec"/>
+                        <outlet property="option3Button" destination="4pY-mp-C7d" id="ygI-4w-g50"/>
+                        <outlet property="option4Button" destination="QhY-91-b9k" id="yOM-qb-HgE"/>
                         <outlet property="playAgainButton" destination="zHk-TW-0GR" id="NQD-u9-XtR"/>
                         <outlet property="questionField" destination="pUW-0R-Pci" id="Vj5-Fn-14E"/>
-                        <outlet property="trueButton" destination="Nz0-Cu-ryp" id="TSx-Zf-B3g"/>
+                        <outlet property="responseLabel" destination="k3m-qk-Cnh" id="cV9-XB-i16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnC-oI-uf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="22.5" y="33.802816901408448"/>
         </scene>
     </scenes>
 </document>
